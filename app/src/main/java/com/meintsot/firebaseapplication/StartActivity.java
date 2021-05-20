@@ -35,9 +35,9 @@ public class StartActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference ref = database.getReference();
-                ref.child("Users").child("username").setValue("TestUser");
+//                FirebaseDatabase database = FirebaseDatabase.getInstance();
+//                DatabaseReference ref = database.getReference();
+//                ref.child("Users").child("username").setValue("TestUser");
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 finish(); // for not going back to main activity
 

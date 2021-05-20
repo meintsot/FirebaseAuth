@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), StartActivity.class));
             finish();
         }
-//        database = FirebaseDatabase.getInstance();
-//        ref = database.getReference();
+        database = FirebaseDatabase.getInstance();
+        ref = database.getReference();
 //        ref.child("Users").push();
 //        ref.child("Users").child("username").push();
 //        ref.child("Users").child("username").setValue("TestUser");
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
 //                ref.child("test").setValue("This is a test");
                 auth.signOut();
                 startActivity(new Intent(getApplicationContext(), StartActivity.class));
+                ref.child("Users").child("username").setValue("TestUser");
                 finish();
             }
         });
